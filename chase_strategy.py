@@ -2,6 +2,8 @@ from strategy import Strategy
 
 class Chase_Strategy(Strategy):
 
+    def __str__(self):
+        return("Chase_Strategy on "+self.ticker)
+
     def run(self):
-        print(self.ticker * 5)
-        return 0
+        return 0.0
