@@ -18,7 +18,8 @@ for stock_name in stocks:
 
     print("Number of points:", len(listized))
 
-    with open("./csvs/"+stock_name+"-"+speriod+"-"+sinterval+".csv", "w") as f:
+    #with open("./csvs/"+stock_name+"-"+speriod+"-"+sinterval+".csv", "w") as f:
+    with open("./csvs/"+stock_name+".csv", "w") as f:
         for entry in listized:
             f.write(str(entry)+"\n")
 

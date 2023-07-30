@@ -7,7 +7,7 @@ from chase_strategy import Chase_Strategy
 
 
 def run_strategy(ticker):
-    strategy = Chase_Strategy(ticker, "csvs/"+ticker+".csv")
+    strategy = Strategy(ticker, "csvs/"+ticker+".csv")
     return strategy.run()
 
 
@@ -17,6 +17,6 @@ def run_strategies(tickers):
 
 
 if __name__ == "__main__":
-    tickers = ["AAPL", "MSFT"]
+    tickers = ["AAPL", "MSFT", "SPY", "TSLA", "ROKU", "INTC", "AMZN"]
 
     run_strategies(tickers)

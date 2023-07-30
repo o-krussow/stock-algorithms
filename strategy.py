@@ -9,4 +9,5 @@ class Strategy:
     def run(self):
         #Top level strategy function. manager.py calls this function to start a new strategy thread.
         print(self.csv_path, len(self.df.index), "entries")
+
         return 0
