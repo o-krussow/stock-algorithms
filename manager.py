@@ -8,7 +8,7 @@ from chase_strategy import Chase_Strategy
 
 def run_strategy(ticker_and_strat):
     curr_ticker, curr_strat = ticker_and_strat
-    strategy = curr_strat(curr_ticker, "csvs/"+curr_ticker+".csv")
+    strategy = curr_strat(curr_ticker, "csvs/")
     return strategy.run()
 
 def run_strategies(ticker_and_strats):
@@ -18,7 +18,7 @@ def run_strategies(ticker_and_strats):
 
 if __name__ == "__main__":
     tickers = ["AAPL", "MSFT", "SPY", "TSLA", "ROKU", "INTC", "AMZN"]
-    strategies = [Strategy, Chase_Strategy]
+    strategies = [Chase_Strategy]
 
     ticker_and_strats = []
 
