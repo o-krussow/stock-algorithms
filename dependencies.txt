@@ -1,0 +1,3 @@
+yeah yeah yeah eventually there will be an actual requirements.txt or setup.py but this is quick and easy so here we go
+yfinance
+mariadb==1.0.11
