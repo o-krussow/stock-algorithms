@@ -20,6 +20,8 @@ def drop_tables():
 def build_tables():
     f_contents = read_tickers_from_file("nasdaq_tickers.txt")
 
+    print(f_contents)
+
     for ticker in f_contents:
         try:
             cursor.execute("CREATE TABLE "+ticker+"( timestamp varchar(30), price FLOAT, primary key(timestamp));")
@@ -35,9 +37,11 @@ def build_tables():
             for key in sorted(new_data.keys()):
                 cursor.execute("INSERT INTO "+ticker+" (timestamp, price) VALUES (\""+key+"\", "+str(new_data[key])+");")
 
-        except mariadb.OperationalError:
+        except mariadb.OperationalError as operr:
+            print(operr)
             continue
-        except mariadb.ProgrammingError:
+        except mariadb.ProgrammingError as progerr:
+            print(progerr)
             continue
 
         
