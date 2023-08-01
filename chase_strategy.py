@@ -60,10 +60,12 @@ class Chase_Strategy(Strategy):
     def compare_returns():
         #uses annual_return_pct
         #returns ETF to purchase that month
+        pass
 
 
     def month_forward():
-  
+        pass
+
     def price_from_date(self, date, dataframe):
         i = dataframe.index[dataframe["Date"] == date].tolist()
         return dataframe[i]["Close"]
