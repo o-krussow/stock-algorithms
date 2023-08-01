@@ -22,7 +22,7 @@ class Brokerage():
     def buy(self, ticker, ticker_dataframe, date, dollar_amount = 0, percentage = 0):
         #HANDLE THESE SOMEWHERE
         #Makes sure we have enough cash to buy
-        if dollar_amount > self.holdings["Cash"]:
+        if dollar_amount > self.cash:
             raise ValueError
         
         #Makes sure date is valid
@@ -41,13 +41,13 @@ class Brokerage():
         
         #Finds the price at said date and total cash_used
         date_price = self.price_from_date(date, ticker_dataframe)
-        cash_used = self.holdings["Cash"] * percentage + dollar_amount  #since one must be zero, this should work for both cases
+        cash_used = self.cash * percentage + dollar_amount  #since one must be zero, this should work for both cases
         
         #calculates how much we are purchasing
         amount_purchased = cash_used / date_price
 
         #resets our cash amount and sets our new holding amount purchased, makes sure to not reset 
-        self.holdings["Cash"] = self.holdings["Cash"] - cash_used
+        self.cash = self.cash - cash_used
         self.holdings[ticker] = self.holdings[ticker] + amount_purchased
 
 
@@ -80,7 +80,7 @@ class Brokerage():
             raise ValueError
 
         #updates our cash amount and resets our holding amount purchased, makes sure to not reset 
-        self.holdings["Cash"] = self.holdings["Cash"] + cash_selling
+        self.cash = self.cash + cash_selling
         self.holdings[ticker] = self.holdings[ticker] - stock_amount_selling
 
 
