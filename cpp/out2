@@ -1,0 +1,229 @@
+brokerage.cpp:7:22: error: expected unqualified-id before ‘float’
+    7 |                 std::float cash = 10000;
+      |                      ^~~~~
+brokerage.cpp:8:26: error: ‘string’ was not declared in this scope
+    8 |                 std::map<string, float> holdings;
+      |                          ^~~~~~
+brokerage.cpp:8:26: note: suggested alternatives:
+In file included from /usr/include/c++/11/iosfwd:39,
+                 from /usr/include/c++/11/ios:38,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from brokerage.cpp:2:
+/usr/include/c++/11/bits/stringfwd.h:79:33: note:   ‘std::string’
+   79 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+In file included from /usr/include/c++/11/bits/locale_classes.h:40,
+                 from /usr/include/c++/11/bits/ios_base.h:41,
+                 from /usr/include/c++/11/ios:42,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from brokerage.cpp:2:
+/usr/include/c++/11/string:67:11: note:   ‘std::pmr::string’
+   67 |     using string    = basic_string<char>;
+      |           ^~~~~~
+brokerage.cpp:8:39: error: template argument 1 is invalid
+    8 |                 std::map<string, float> holdings;
+      |                                       ^
+brokerage.cpp:8:39: error: template argument 3 is invalid
+brokerage.cpp:8:39: error: template argument 4 is invalid
+brokerage.cpp:9:26: error: ‘string’ has not been declared
+    9 |                 void buy(string ticker, map<string, float> ticker_prices, string date, float dollar_amount)
+      |                          ^~~~~~
+brokerage.cpp:9:41: error: ‘map’ has not been declared
+    9 |                 void buy(string ticker, map<string, float> ticker_prices, string date, float dollar_amount)
+      |                                         ^~~
+brokerage.cpp:9:44: error: expected ‘,’ or ‘...’ before ‘<’ token
+    9 |                 void buy(string ticker, map<string, float> ticker_prices, string date, float dollar_amount)
+      |                                            ^
+brokerage.cpp:9:107: error: expected ‘;’ at end of member declaration
+    9 |                 void buy(string ticker, map<string, float> ticker_prices, string date, float dollar_amount)
+      |                                                                                                           ^
+      |                                                                                                            ;
+brokerage.cpp:10:27: error: ‘string’ has not been declared
+   10 |                 void sell(string ticker, map<string, float> ticker_prices, string date, float dollar_amount)
+      |                           ^~~~~~
+brokerage.cpp:10:42: error: ‘map’ has not been declared
+   10 |                 void sell(string ticker, map<string, float> ticker_prices, string date, float dollar_amount)
+      |                                          ^~~
+brokerage.cpp:10:45: error: expected ‘,’ or ‘...’ before ‘<’ token
+   10 |                 void sell(string ticker, map<string, float> ticker_prices, string date, float dollar_amount)
+      |                                             ^
+brokerage.cpp:10:108: error: expected ‘;’ at end of member declaration
+   10 |                 void sell(string ticker, map<string, float> ticker_prices, string date, float dollar_amount)
+      |                                                                                                            ^
+      |                                                                                                             ;
+brokerage.cpp:11:2: error: expected ‘;’ after class definition
+   11 | }
+      |  ^
+      |  ;
+brokerage.cpp:13:6: error: variable or field ‘buy’ declared void
+   13 | void Brokerage::buy(string ticker, map<string, float> ticker_prices, string date, float dollar_amount) {
+      |      ^~~~~~~~~
+brokerage.cpp:13:21: error: ‘string’ was not declared in this scope
+   13 | void Brokerage::buy(string ticker, map<string, float> ticker_prices, string date, float dollar_amount) {
+      |                     ^~~~~~
+brokerage.cpp:13:21: note: suggested alternatives:
+In file included from /usr/include/c++/11/iosfwd:39,
+                 from /usr/include/c++/11/ios:38,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from brokerage.cpp:2:
+/usr/include/c++/11/bits/stringfwd.h:79:33: note:   ‘std::string’
+   79 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+In file included from /usr/include/c++/11/bits/locale_classes.h:40,
+                 from /usr/include/c++/11/bits/ios_base.h:41,
+                 from /usr/include/c++/11/ios:42,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from brokerage.cpp:2:
+/usr/include/c++/11/string:67:11: note:   ‘std::pmr::string’
+   67 |     using string    = basic_string<char>;
+      |           ^~~~~~
+brokerage.cpp:13:36: error: ‘map’ was not declared in this scope
+   13 | void Brokerage::buy(string ticker, map<string, float> ticker_prices, string date, float dollar_amount) {
+      |                                    ^~~
+brokerage.cpp:13:36: note: suggested alternatives:
+In file included from /usr/include/c++/11/map:61,
+                 from brokerage.cpp:1:
+/usr/include/c++/11/bits/stl_map.h:100:11: note:   ‘std::map’
+  100 |     class map
+      |           ^~~
+In file included from brokerage.cpp:1:
+/usr/include/c++/11/map:78:13: note:   ‘std::pmr::map’
+   78 |       using map
+      |             ^~~
+brokerage.cpp:13:40: error: ‘string’ was not declared in this scope
+   13 | void Brokerage::buy(string ticker, map<string, float> ticker_prices, string date, float dollar_amount) {
+      |                                        ^~~~~~
+brokerage.cpp:13:40: note: suggested alternatives:
+In file included from /usr/include/c++/11/iosfwd:39,
+                 from /usr/include/c++/11/ios:38,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from brokerage.cpp:2:
+/usr/include/c++/11/bits/stringfwd.h:79:33: note:   ‘std::string’
+   79 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+In file included from /usr/include/c++/11/bits/locale_classes.h:40,
+                 from /usr/include/c++/11/bits/ios_base.h:41,
+                 from /usr/include/c++/11/ios:42,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from brokerage.cpp:2:
+/usr/include/c++/11/string:67:11: note:   ‘std::pmr::string’
+   67 |     using string    = basic_string<char>;
+      |           ^~~~~~
+brokerage.cpp:13:48: error: expected primary-expression before ‘float’
+   13 | void Brokerage::buy(string ticker, map<string, float> ticker_prices, string date, float dollar_amount) {
+      |                                                ^~~~~
+brokerage.cpp:13:70: error: ‘string’ was not declared in this scope
+   13 | void Brokerage::buy(string ticker, map<string, float> ticker_prices, string date, float dollar_amount) {
+      |                                                                      ^~~~~~
+brokerage.cpp:13:70: note: suggested alternatives:
+In file included from /usr/include/c++/11/iosfwd:39,
+                 from /usr/include/c++/11/ios:38,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from brokerage.cpp:2:
+/usr/include/c++/11/bits/stringfwd.h:79:33: note:   ‘std::string’
+   79 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+In file included from /usr/include/c++/11/bits/locale_classes.h:40,
+                 from /usr/include/c++/11/bits/ios_base.h:41,
+                 from /usr/include/c++/11/ios:42,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from brokerage.cpp:2:
+/usr/include/c++/11/string:67:11: note:   ‘std::pmr::string’
+   67 |     using string    = basic_string<char>;
+      |           ^~~~~~
+brokerage.cpp:13:83: error: expected primary-expression before ‘float’
+   13 | void Brokerage::buy(string ticker, map<string, float> ticker_prices, string date, float dollar_amount) {
+      |                                                                                   ^~~~~
+brokerage.cpp:31:6: error: variable or field ‘sell’ declared void
+   31 | void Brokerage::sell(string ticker, map<string, float> ticker_prices, string date, float dollar_amount) {
+      |      ^~~~~~~~~
+brokerage.cpp:31:22: error: ‘string’ was not declared in this scope
+   31 | void Brokerage::sell(string ticker, map<string, float> ticker_prices, string date, float dollar_amount) {
+      |                      ^~~~~~
+brokerage.cpp:31:22: note: suggested alternatives:
+In file included from /usr/include/c++/11/iosfwd:39,
+                 from /usr/include/c++/11/ios:38,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from brokerage.cpp:2:
+/usr/include/c++/11/bits/stringfwd.h:79:33: note:   ‘std::string’
+   79 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+In file included from /usr/include/c++/11/bits/locale_classes.h:40,
+                 from /usr/include/c++/11/bits/ios_base.h:41,
+                 from /usr/include/c++/11/ios:42,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from brokerage.cpp:2:
+/usr/include/c++/11/string:67:11: note:   ‘std::pmr::string’
+   67 |     using string    = basic_string<char>;
+      |           ^~~~~~
+brokerage.cpp:31:37: error: ‘map’ was not declared in this scope
+   31 | void Brokerage::sell(string ticker, map<string, float> ticker_prices, string date, float dollar_amount) {
+      |                                     ^~~
+brokerage.cpp:31:37: note: suggested alternatives:
+In file included from /usr/include/c++/11/map:61,
+                 from brokerage.cpp:1:
+/usr/include/c++/11/bits/stl_map.h:100:11: note:   ‘std::map’
+  100 |     class map
+      |           ^~~
+In file included from brokerage.cpp:1:
+/usr/include/c++/11/map:78:13: note:   ‘std::pmr::map’
+   78 |       using map
+      |             ^~~
+brokerage.cpp:31:41: error: ‘string’ was not declared in this scope
+   31 | void Brokerage::sell(string ticker, map<string, float> ticker_prices, string date, float dollar_amount) {
+      |                                         ^~~~~~
+brokerage.cpp:31:41: note: suggested alternatives:
+In file included from /usr/include/c++/11/iosfwd:39,
+                 from /usr/include/c++/11/ios:38,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from brokerage.cpp:2:
+/usr/include/c++/11/bits/stringfwd.h:79:33: note:   ‘std::string’
+   79 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+In file included from /usr/include/c++/11/bits/locale_classes.h:40,
+                 from /usr/include/c++/11/bits/ios_base.h:41,
+                 from /usr/include/c++/11/ios:42,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from brokerage.cpp:2:
+/usr/include/c++/11/string:67:11: note:   ‘std::pmr::string’
+   67 |     using string    = basic_string<char>;
+      |           ^~~~~~
+brokerage.cpp:31:49: error: expected primary-expression before ‘float’
+   31 | void Brokerage::sell(string ticker, map<string, float> ticker_prices, string date, float dollar_amount) {
+      |                                                 ^~~~~
+brokerage.cpp:31:71: error: ‘string’ was not declared in this scope
+   31 | void Brokerage::sell(string ticker, map<string, float> ticker_prices, string date, float dollar_amount) {
+      |                                                                       ^~~~~~
+brokerage.cpp:31:71: note: suggested alternatives:
+In file included from /usr/include/c++/11/iosfwd:39,
+                 from /usr/include/c++/11/ios:38,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from brokerage.cpp:2:
+/usr/include/c++/11/bits/stringfwd.h:79:33: note:   ‘std::string’
+   79 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+In file included from /usr/include/c++/11/bits/locale_classes.h:40,
+                 from /usr/include/c++/11/bits/ios_base.h:41,
+                 from /usr/include/c++/11/ios:42,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from brokerage.cpp:2:
+/usr/include/c++/11/string:67:11: note:   ‘std::pmr::string’
+   67 |     using string    = basic_string<char>;
+      |           ^~~~~~
+brokerage.cpp:31:84: error: expected primary-expression before ‘float’
+   31 | void Brokerage::sell(string ticker, map<string, float> ticker_prices, string date, float dollar_amount) {
+      |                                                                                    ^~~~~
