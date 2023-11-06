@@ -8,6 +8,7 @@ class Brokerage {
 		std::map<std::string, float> holdings;
 		void buy(std::string ticker, std::map<std::string, float> ticker_prices, std::string date, float dollar_amount);
 		void sell(std::string ticker, std::map<std::string, float> ticker_prices, std::string date, float dollar_amount);
+		float Brokerage::account_total(std::map<std::string, std::map<std::string, float>> ticker_prices, std::string date);
 };
 
 void Brokerage::buy(std::string ticker, std::map<std::string, float> ticker_prices, std::string date, float dollar_amount) {
@@ -45,6 +46,20 @@ void Brokerage::sell(std::string ticker, std::map<std::string, float> ticker_pri
 	Brokerage::cash += dollar_amount;
 	Brokerage::holdings[ticker] -= stock_amount_selling;
 
+}
+
+float Brokerage::account_total(std::map<std::string, std::map<std::string, float>> all_ticker_prices, std::string date){
+	float stock_value = 0;
+	for (const auto& pair : Brokerage::holdings) {
+    	const std::string& ticker = pair.first;
+    	float amount = pair.second;
+
+		std::map<std::string, float> ticker_prices = all_ticker_prices[ticker];
+		float current_stock_price = ticker_prices[date];
+		stock_value += current_stock_price * amount;
+	}
+
+	return Brokerage::cash + stock_value;
 }
 
 
